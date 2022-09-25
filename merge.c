@@ -1,3 +1,5 @@
+// Hocine Abderrahmane
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -41,11 +43,10 @@ struct ListNode* newNode(int num){
 struct ListNode* mergeKLists(struct ListNode** lists, int listsSize){
     struct ListNode* head = NULL;
     struct ListNode* current = NULL;
-    int i,count = 0;
+    int i;
     for(i=0 ; i<listsSize ; i++){
         while(lists[i] != NULL){
             struct ListNode* temp = newNode(lists[i]->val);
-            count++;
             if(head == NULL){
                 head = temp;
                 current = head;
